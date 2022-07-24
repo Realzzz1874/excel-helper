@@ -87,7 +87,9 @@ const start = async () => {
   await saveImg(workbook, img_arr);
 
   await workbook.xlsx.writeFile(success_file).then(() => {
-    console.info("\n 处理成功，程序将在 5s 后自动关闭\n");
+    console.info(
+      `处理成功！已经生成文件 ${success_file} \n程序将在 5s 后自动关闭\n`
+    );
     setTimeout(() => {
       process.exit();
     }, 5000);

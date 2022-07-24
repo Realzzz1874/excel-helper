@@ -8,10 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "node ./index.js",
-    "pkg": "pkg . --out-path=dist/"
+    "dev": "node ./index.js"
   },
-  "bin": "./index.js",
   "dependencies": {
     "exceljs": "^4.3.0",
     "fetch": "^1.1.0",
