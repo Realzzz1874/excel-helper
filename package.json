@@ -1,0 +1,22 @@
+{
+  "name": "excel-helper",
+  "version": "1.0.0",
+  "description": "excel node scripts",
+  "main": "index.js",
+  "repository": "git@github.com:Realzzz1874/excel-helper.git",
+  "author": "realzzz <real_z@yeah.net>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node ./index.js",
+    "pkg": "pkg . --out-path=dist/"
+  },
+  "bin": "./index.js",
+  "dependencies": {
+    "exceljs": "^4.3.0",
+    "fetch": "^1.1.0",
+    "pkg": "^5.8.0",
+    "request": "^2.88.2",
+    "single-line-log": "^1.1.2"
+  }
+}
