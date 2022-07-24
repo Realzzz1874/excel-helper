@@ -5,6 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const request = require("request");
 const log = require("single-line-log").stdout;
+const process = require("process");
 
 const getBuffer = (img_url) => {
   return new Promise((resolve, reject) => {
@@ -53,11 +54,11 @@ const saveImg = async (workbook, img_obj_arr) => {
 };
 
 const start = async () => {
-  const fdirs = await fs.readdirSync(path.join(__dirname, "./"));
+  const fdirs = await fs.readdirSync(path.join(process.cwd(), "./"));
   const f = fdirs.find((f) => !f.startsWith(".") && f.endsWith(".xlsx"));
   await console.info(`\n找到 excel 文件：${f}\n`);
-  const xlsx_file = path.join(__dirname, `./${f}`);
-  const success_file = path.join(__dirname, `./result_${f}`);
+  const xlsx_file = path.join(process.cwd(), `./${f}`);
+  const success_file = path.join(process.cwd(), `./result_${f}`);
 
   let img_arr = [];
   const workbook = new ExcelJS.Workbook();
