@@ -69,8 +69,11 @@ const start = async () => {
         if (cell.value.toString().startsWith("http")) {
           const img_url = cell.value.toString();
           cell.value = null;
-          cell.style.alignment.horizontal = "center";
-          cell.style.alignment.vertical = "justify";
+          // style.alignment maybe undefined
+          try {
+            cell.style.alignment.horizontal = "center";
+            cell.style.alignment.vertical = "justify";
+          } catch {}
           const obj = {
             sheet: sheet,
             img_url,
