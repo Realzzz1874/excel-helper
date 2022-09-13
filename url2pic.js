@@ -44,6 +44,7 @@ const saveImg = async (workbook, img_obj_arr) => {
         tl: { col: position.col - 0.5, row: position.row - 0.5 },
         // br: { col: 3.5, row: 5.5 },
         ext: { width: 100, height: 100 },
+        editAs: "oneCell",
         hyperlinks: {
           hyperlink: img_url,
           tooltip: `${img_url}`,
